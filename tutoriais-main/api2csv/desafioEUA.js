@@ -17,11 +17,29 @@ function csvPopulationEUA() {
             const population2018 = data.find(record => record.Year === '2018');
 
             if (population2018) {
-                console.log('USA Population in 2018:', population2018.Population);
+                // console.log('USA Population in 2018:', population2018.Population);
             } else {
                 console.log('Population data for 2018 not found.');
             }
 
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+        
+        
+        axios.request(config)
+        .then((response) => {
+            // console.log(response.data)
+            const dado = response.data.data;
+            const ano = dado.map(year => year.Year)
+            const pop = dado.map(populacao => populacao.Population)
+            let obj = [];
+            for(let i=0; i< ano.length ; i++){
+                let n_obj = {Ano: ano[i], Pop: pop[i]}
+                obj.push(n_obj)
+            }
+            console.log(obj)
         })
         .catch((error) => {
             console.log(error);

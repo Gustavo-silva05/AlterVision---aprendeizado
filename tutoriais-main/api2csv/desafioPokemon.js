@@ -42,6 +42,8 @@ function csvGenerator(pokemonArray) {
             { id: 'height', title: 'Height' },
             { id: 'weight', title: 'Weight' },
             //Adicionar Exp base e Habilidades
+            { id: 'Exp' ,   title: 'Exp'},
+            { id: 'Skill' ,   title: 'Skill'}
         ]
     });
 
