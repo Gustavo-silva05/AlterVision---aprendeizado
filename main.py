@@ -3,7 +3,7 @@ tabela = []
 
 for i in range(1,10):
 	num.append(i)
-	print (i)
+	print (num[i-1])
 	
 	
 for i in range(1,10):
