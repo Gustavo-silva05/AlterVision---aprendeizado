@@ -36,7 +36,7 @@ function csvPopulationEUA() {
             const pop = dado.map(populacao => populacao.Population)
             let obj = [];
             for(let i=0; i< ano.length ; i++){
-                let n_obj = {Ano: ano[i], Pop: pop[i]}
+                let n_obj = {Ano: ano[i], Populacao: pop[i]}
                 obj.push(n_obj)
             }
             console.log(obj)
