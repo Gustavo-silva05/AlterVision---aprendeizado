@@ -3,6 +3,7 @@ import dayjs from 'dayjs';
 import { useCallback, useEffect, useState } from 'react';
 import style from './Game.module.css';
 import { Link, useParams } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 // type/props define um tipo com os possiveis estados para variaveis ou funções vazias
 type SquareProps = {
@@ -113,7 +114,7 @@ export default function Game() {
         } catch (error) {
             console.error(`Failed to fetch game(${id.slice(1)}):`, error);
         }
-    }, [ setHistory]);
+    }, [setHistory]);
 
     useEffect(() => {
         if (id) {
@@ -177,10 +178,17 @@ export default function Game() {
     });
 
     return (
-        <> <header className={style.header}>
-            <Link to="/"><button>Home</button></Link>
-            <Link to="/History"><button>History</button></Link>
-        </header>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+        >
+
+            <header className={style.header}>
+                <Link to="/"><button>Home</button></Link>
+                <Link to="/History"><button>History</button></Link>
+            </header>
             <div className={style.game}>
                 <div className={style.gameBoard}>
                     <Board
@@ -194,7 +202,7 @@ export default function Game() {
                     <ol>{moves}</ol>
                 </div>
             </div>
-        </>
+        </motion.div>
     );
 }
 
