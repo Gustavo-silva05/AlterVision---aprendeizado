@@ -1,0 +1,145 @@
+/* Game.module.css */
+
+.header {
+    padding: 2rem;
+    background-color: #5192ec;
+    margin: none;
+}
+
+.header button{
+    border: 1px solid #fff;
+    border-radius: 8px;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-right: 2rem;
+}
+.header button:hover {
+    background: #66a6ff;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.game {
+    background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.gameBoard {
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.gameInfo {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 100%;
+}
+
+.status {
+    font-size: 2rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+    margin-bottom: 1rem;
+}
+
+.boardRow {
+    display: flex;
+}
+
+.square {
+    background: #ffffff;
+    border: 2px solid #666;
+    font-size: 2.5rem;
+    font-weight: bold;
+    height: 100px;
+    width: 100px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.square:hover {
+    background: #66a6ff;
+    transform: scale(1.05);
+}
+
+.buttonNewGame {
+    margin-top: 2rem;
+    background-color: #ffffff;
+    color: #333;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.buttonNewGame:hover {
+    background: #66a6ff;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.buttonHistory {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.buttonHistory:hover {
+    background: #ffffff;
+    color: #66a6ff;
+}
+
+.gameHistory h2 {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.gameHistory ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.gameHistory li {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+details {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+summary {
+    font-weight: bold;
+}
