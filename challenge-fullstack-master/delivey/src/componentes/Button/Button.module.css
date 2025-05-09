@@ -1,0 +1,16 @@
+.button{
+    /* background-color: aqua; */
+    padding: 15px 100px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
