@@ -32,11 +32,11 @@ app.post("/push", async (req, res) => {
     if (data_id) {
         return res.status(400).send({ message: "Id already exists" });
     }
-    const [name, weight, address] = [req.body.client_name, req.body.weight, req.body.address];
+    const [name, weight, address] = [req.body.name, req.body.weight, req.body.address];
     if (!name || !weight || !address) {
         return res.status(400).send({ message: "Missing name, weight or address" });
     }
-    const [log, neighborhood, number, city, state, country, lat, long] = [address.log, address.neighborhood, address.number, address.city, address.state, address.country, address.geo.lat, address.geo.long];
+    const [log, neighborhood, number, city, state, country, lat, long] = [address.street, address.neighborhood, address.number, address.city, address.state, address.country, address.geo.lat, address.geo.long];
     if (!log || !neighborhood || !number || !city || !state || !country || !lat || !long) {
         return res.status(400).send({ message: "Missing log, neighborhood, number, city, state, country, lat or long" });
     }
